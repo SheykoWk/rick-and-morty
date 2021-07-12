@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+.search-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
+.search-container::after{
+  top: 0;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/65cc28bf-d46a-4459-8d83-e94298a26133/ddl3vjo-479033b2-a9eb-47b7-a53a-f43aae2f3a6b.png/v1/fill/w_1208,h_661,q_70,strp/rick_and_morty___s2e10_new_earth_by_ceelker_ddl3vjo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQ3NyIsInBhdGgiOiJcL2ZcLzY1Y2MyOGJmLWQ0NmEtNDQ1OS04ZDgzLWU5NDI5OGEyNjEzM1wvZGRsM3Zqby00NzkwMzNiMi1hOWViLTQ3YjctYTUzYS1mNDNhYWUyZjNhNmIucG5nIiwid2lkdGgiOiI8PTEwMDAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.KtCibDyODjKnMSMQr5LfembLPhlMy5VUWAhWzqbxI-U);
+  filter: grayscale(100%) opacity(0.2);
+}
+.header{
+  display: flex;
+
+}
+.logo-image{
+  z-index: 100;
+  height: 70px;
+  filter: grayscale(100%);
+  opacity: 1;
+  margin: 15px auto;
+}
+.search-content{
+  display: flex;
+}
+.search-container__right {
+  width: 50%;
+  z-index: 100;
+}
+.search-container__right img{
+  height: 450px;
+}
+.search-container__left{
+  z-index: 100;
+  display: inline;
+  width: 50%;
+  padding: 80px;
+}
+.search-container__left h1{
+  color: #626774;
+  font-size: 3.5rem;
+}
+.search-wrap input{
+  outline: none;
+  border: 0;
+  color: #8b7d77;
+}
+.search-wrap .search-box{
+  position: relative;
+  width: 350px;
+  height:60px;
+}
+.search-wrap .search-box input{
+  height: 30px;
+  position: absolute;
+  width: 300px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+.search-wrap .search-box button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #a8da35;
+  cursor: pointer;
+  border: 0;
+}
+.search-wrap .search-box button:hover{
+	background: #2f8a33;	
+}
+.search-wrap .search-box .fas{
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+	font-size: 20px;
+}
+.resident-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px
+}
+.resident-info__card{
+  margin: 16px;
+  margin-top: 50px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  color: rgba(0, 0, 0, 0.87);
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.resident-info__image {
+  position: relative;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.resident-info__image-img{
+  width: 100%;
+  border-radius: 8px;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resident-info__content{
+  padding: 30px;
 }
+.resident-info__footer{
+  margin-top: 15px;
+}
+.resident-info__footer div{
+  display: inline-block;
+}
+.resident-info__footer-image{
+  color: #888;
+  position: relati;
+  bottom: 15px;
+  left: 15px;
+}
+.resident-info__footer-image img {
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 50px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.resident-info__footer-episodes{
+  line-height: 30px;
+  position: absolute;
+  left: 80px;
+  bottom: 25px;
+  font-size:1.2rem;
+}
+.location-container{
+  background-image: url(https://i.ytimg.com/vi/LTqV4Bfhelc/maxresdefault.jpg);
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 100;
 }
+.location-container span{
+  color: #fff;
+  font-size: 2rem;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
